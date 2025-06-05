@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>predict_FDI</title>
+</head>
+<body>
+    <h1>PREDICTION OF FIRE WEEATHER INDEX(FWI) </h1>
+    <P>FIRE WEATHER INDEX (FWI) is The Fire Weather Index (FWI) is a unitless number ranging from 0 to 180, 
+        with higher numbers indicating greater fire danger.
+        <br>It's commonly categorized into danger classes, which helps interpret the potential for wildfires</br>
+    </P>
+    <form action="{{url_for("predict")}}" method="post">
+        <input type="text" name="Temperature" placeholder="ENTER Temperature"  required="required"/><br>
+        <input type="text" name="RH" placeholder="ENTER RH"  required="required"/><br>
+        <input type="text" name="Ws" placeholder="ENTER Ws"  required="required"/><br>
+        <input type="text" name="Rain" placeholder="ENTER Rain"  required="required"/><br>
+        <input type="text" name="FFMC" placeholder="ENTER FFMC"  required="required"/><br>
+        <input type="text" name="DMC" placeholder="ENTER DMC"  required="required"/><br>
+        <input type="text" name="ISI" placeholder="ENTER ISI"  required="required"/><br>
+        <input type="text" name="Region" placeholder="ENTER Region"  required="required"/><br>
+        <input type="text" name="Fire" placeholder="ENTER Fire(0/1)"  required="required"/><br>
+        
+        <button type="submit" class="btn">SUBMIT</button>
+    </form>
+    <h2>THE PREDICTED FIRE WEATHER INDEX (FWI) IS : {{result}}</h2>
+    
+</body>
+</html>
